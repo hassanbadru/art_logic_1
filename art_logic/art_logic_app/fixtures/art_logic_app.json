@@ -1,0 +1,92 @@
+[
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 1,
+        "fields": {
+            "type": "Encoding",
+            "value": "6111",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Encoding",
+            "value": "340",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Encoding",
+            "value": "-2628",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Encoding",
+            "value": "-255",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Encoding",
+            "value": "7550",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Decoding",
+            "value": "0A0A",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Decoding",
+            "value": "0029",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Decoding",
+            "value": "3F0F",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Decoding",
+            "value": "4400",
+            "result": ""
+        }
+    },
+    {
+        "model": "art_logic_app.UserTask",
+        "pk": 2,
+        "fields": {
+            "type": "Decoding",
+            "value": "5E7F",
+            "result": ""
+        }
+    }
+]
