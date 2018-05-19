@@ -2,13 +2,14 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from django.template.loader import render_to_string
 
 from django.views.generic import TemplateView, View, CreateView
 
 from art_logic_app.models import UserTask
 from art_logic_app.serializers import UserTaskSerializer
 
-from art_logic_app.utils import encoder
+from art_logic_app.myfunctions import encoder, decoder
 
 from rest_framework import generics
 
@@ -35,25 +36,22 @@ class ArtLogicApp(TemplateView):
         encode_operation = encode == "on"
         print(encode_operation)
 
+        result = ''
         if encode_operation:
             print('Encoding')
-            encoding_result = encoder(to_compute)
-            context['encoding_result'] = encoding_result
+            encoded_result = encoder(to_compute)
+            # context['encoding_result'] = encoding_result
+            result = encoded_result
         else:
             print('Decoding')
-            # decoding_result = decoder(to_compute)
+            decoded_result = decoder(to_compute)
+            result = decoded_result
 
-
-        # user_operation = UserOperation()
-        # print(user_operation.encoder('0'))
-
-        # encoded_value = encoder('8191')
-        # print(encoded_value)
-
-        # context['encode_operation'] = encode_operation
-        # print(encoder('0'))
-
+        context['result'] = result
+        
         return context
+        # return render(self.request, 'index.html', {'result': result})
+        # return render_to_string('index.html', {'result': result})
 
 
     # def post(self, *args, **kwargs):

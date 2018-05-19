@@ -102,51 +102,66 @@ def encoder(input_num):
     print(output)
     return output
 
-#
-# def decoder(input_num):
-#
-#   # hex to binary lookup dictionary
-#   h2b_lookup = {
-#     '0':'0000', '1': '0001',
-#     '2': '0010', '3': '0011',
-#     '4': '0100', '5': '0101',
-#     '6': '0110', '7': '0111',
-#     '8': '1000', '9': '1001',
-#     'A': '1010', 'B': '1011',
-#     'C': '1100', 'D': '1101',
-#     'E': '1110', 'F': '1111'
-#     }
-#
-#   bin_num = ''
-#   for i in input_num:
-#     bin_num += h2b_lookup[i]
-#
-#   print(bin_num)
-#
-#   hi_bit = bin_num[:8]
-#   lo_bit = bin_num[8:]
-#
-#   print(hi_bit, lo_bit)
-#
-#
-#   #Decoding Process: hi_bit ~ low bit (binary)
-#   lo_bit = hi_bit[7] + lo_bit[1:8]
-#   hi_bit = '0' + hi_bit[:7]
-#
-#
-#   print(hi_bit + lo_bit)
-#
-#   #Decoded Binary
-#   bin_num = hi_bit + lo_bit
-#
-#   n = 0
-#   dec_integer = 0
-#
-#   for nbit in bin_num[::-1]:
-#     dec_integer += int(nbit) * (2 ** n)
-#     # print(nbit, "* 2^" + str(n)+": ", (2 ** n),  dec_integer)
-#     n += 1
-#
-#   print(dec_integer - 8192)
-#
-#   return dec_integer - 8192
+def decoder(input_num):
+
+  # input_num = input("Value to Decode: ")
+
+  # hex to binary lookup dictionary
+  h2b_lookup = {
+    '0':'0000', '1': '0001',
+    '2': '0010', '3': '0011',
+    '4': '0100', '5': '0101',
+    '6': '0110', '7': '0111',
+    '8': '1000', '9': '1001',
+    'A': '1010', 'B': '1011',
+    'C': '1100', 'D': '1101',
+    'E': '1110', 'F': '1111'
+    }
+
+  #Check if valid string
+  if input_num:
+    bin_num = ''
+    for i in input_num:
+
+      #Check if valid hex
+      try:
+        bin_num += h2b_lookup[i]
+      except KeyError:
+        output = "Please enter a valid hex"
+        print(output)
+        return output
+
+    print(bin_num)
+
+    hi_bit = bin_num[:8]
+    lo_bit = bin_num[8:]
+
+    print(hi_bit, lo_bit)
+
+
+    #Decoding Process: hi_bit ~ low bit (binary)
+    lo_bit = hi_bit[7] + lo_bit[1:8]
+    hi_bit = '0' + hi_bit[:7]
+
+
+    print(hi_bit + lo_bit)
+
+    #Decoded Binary
+    bin_num = hi_bit + lo_bit
+
+    n = 0
+    dec_integer = 0
+
+    for nbit in bin_num[::-1]:
+      dec_integer += int(nbit) * (2 ** n)
+      # print(nbit, "* 2^" + str(n)+": ", (2 ** n),  dec_integer)
+      n += 1
+
+    output = dec_integer - 8192
+    print(output)
+    return output
+
+  else:
+    output = "Please enter a value"
+    print(output)
+    return output

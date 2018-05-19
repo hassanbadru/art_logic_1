@@ -104,6 +104,7 @@ const UserInput = (props) => {
 }
 
 const ResultDisplay = (props) => {
+  $.get('api/art_logic_app/').then(data => console.log(data))
   return (
     <div className={"result_view"}>
         <h4 style={{color: '#000'}}>
@@ -114,7 +115,7 @@ const ResultDisplay = (props) => {
         <hr style={{width: '100%'}}></hr>
         <h3 style={{color: '#000'}}>RESULTS</h3>
         <p style={{color: '#000'}}>{props.user_input}</p>
-        {/* <p style={{color: '#000'}}>{{encoding_result}}</p> */}
+        <p style={{color: '#000'}}>test</p>
         <div className={'col-md-4'} style={{width: '100%'}}>
           TEST1
         </div>
