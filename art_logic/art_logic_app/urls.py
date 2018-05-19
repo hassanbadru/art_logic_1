@@ -3,5 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url('api/art_logic_app/', views.ArtLogicApp.as_view() ),
+    url('api/art_logic_app/', views.ArtLogicAPI.as_view() ),
+    url(r'^$', views.ArtLogicApp.as_view() )
+
 ]
