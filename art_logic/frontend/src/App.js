@@ -130,11 +130,14 @@ const ResultDisplay = (props) => {
         <p style={{color: '#000'}}> {(props.currentOperation === 'encoding') ? '(dec to hex)' : '(hex to dec)'}</p>
         <hr style={{width: '100%'}}></hr>
 
-        {(props.result) ? (<h3 style={{color: '#000'}}>RESULTS</h3>) : null}
+        {/* {(props.result) ? () : null} */}
 
         {
           (window.result.length <= 6) ? (
+          <div>
+            <h3 style={{color: '#000'}}>RESULTS</h3>
             <p style={{color: '#000'}}>{window.result}</p>
+          </div>
         ) : (
           <i style={{color: 'red'}}>{'Error: ' + window.result}</i>
         )

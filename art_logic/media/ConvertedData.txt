@@ -1,9 +1,10 @@
 ENCODED DATA: 
-6111 is encoded as 6F5F
+611 is encoded as 4463
 340 is encoded as 4254
 -2628 is encoded as 2B3C
 -255 is encoded as 3E01
 7550 is encoded as 7A7E
+8191 is encoded as 7F7F
 
 
 DECODED DATA: 
@@ -12,3 +13,4 @@ DECODED DATA:
 3F0F is decoded as -113
 4400 is decoded as 512
 5E7F is decoded as 3967
+ABC is decoded as -6852

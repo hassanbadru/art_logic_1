@@ -95,11 +95,11 @@ def encoder(input_num):
         # print(output)
         return output
     else:
-      output = "Integer can't exceed 16-bit range"
+      output = "Integer value cannot exceed 16-bit range"
       # print(output)
       return output
   else:
-    output = "Please enter a valid integer"
+    output = "Please enter a valid integer value"
     # print(output)
     return output
 
@@ -134,7 +134,7 @@ def decoder(input_num):
           try:
             bin_num += h2b_lookup[i]
           except KeyError:
-            output = "Please enter a valid hex"
+            output = "Please enter a valid hexadecimal value"
             # print(output)
             return output
 
@@ -144,7 +144,7 @@ def decoder(input_num):
           # print(l_num, n_zeros)
 
         elif l_num > 4:
-          output = "The number exceeds 16-bit"
+          output = "Hexadecimal value exceeds 16-bit"
           return output
     else:
           #Check if valid hex
@@ -152,7 +152,7 @@ def decoder(input_num):
             bin_num = h2b_lookup[input_num]
             bin_num = "0" * 12 + bin_num
           except KeyError:
-            output = "Please enter a valid hex"
+            output = "Please enter a valid hexadecimal value"
             # print(output)
             return output
 
@@ -187,6 +187,6 @@ def decoder(input_num):
     return output
 
   else:
-    output = "Please enter a value"
+    output = "Please enter a valid hexadecimal value"
     # print(output)
     return output

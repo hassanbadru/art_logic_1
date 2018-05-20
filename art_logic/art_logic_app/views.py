@@ -1,24 +1,23 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import math
+import os
 
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
+from django.views.generic import TemplateView, View, CreateView
 
 from rest_framework.response import Response
-
-from django.views.generic import TemplateView, View, CreateView
+from rest_framework import generics
 
 from art_logic_app.models import UserAction
 from art_logic_app.serializers import UserActionSerializer
-
 from art_logic_app.myfunctions import encoder, decoder
 
-from rest_framework import generics
 
 
-import math
 
-import os
+
 from django.conf import settings
 
 
@@ -65,7 +64,7 @@ class ArtLogicApp(TemplateView):
 
             context['result'] = str(result)
 
-            #Add to database for REST API
+            #Add to results database for REST API
             if encode_operation:
                 operation_type = 'encoding'
             else:
@@ -79,19 +78,45 @@ class ArtLogicApp(TemplateView):
             # print([i.pk for i in all_items])
             user_action.save()
 
-        encoding_stream = ['6111', '340', '-2628', '-255', '7550']
+        # Get all preloaded inputs from database
+        all_items = UserAction.objects.all()
+        encoding_stream = []
+        decoding_stream = []
+
+        # Categorize inputs
+        for i in all_items:
+            if i.operation == 'encoding':
+                encoding_stream.append(i.input)
+            elif i.operation == 'decoding':
+                decoding_stream.append(i.input)
+
+            # print(i.input, i.operation)
+        # print(encoding_stream, decoding_stream)
+
+        #Test Preloaded Streams
+        # encoding_stream = ['6111', '340', '-2628', '-255', '7550']
+        # decoding_stream = ['0A0A', '0029', '3F0F', '4400', '5E7F']
+
+
+        #Write all valid encoded data to text file
         with open(os.path.join(settings.MEDIA_ROOT, 'ConvertedData.txt'), 'w') as f:
             f.write('ENCODED DATA: '+'\n')
             for x in encoding_stream:
-                f.write(x + ' is encoded as ' + encoder(x) + '\n')
+                encoded = encoder(x)
+                if len(encoded) < 6:
+                    f.write(x + ' is encoded as ' + encoded + '\n')
             f.close()
 
-        decoding_stream = ['0A0A', '0029', '3F0F', '4400', '5E7F']
+
+        #Write all valid decoded data to text file
         with open(os.path.join(settings.MEDIA_ROOT, 'ConvertedData.txt'), 'a') as f:
             f.write('\n\n'+'DECODED DATA: '+'\n')
             for x in decoding_stream:
+                decoded = str(decoder(x))
+                if len(decoded) < 6:
                 # print(x)
-                f.write(x + ' is decoded as ' + str(decoder(x)) + '\n')
+
+                    f.write(x + ' is decoded as ' + decoded + '\n')
             f.close()
 
 
