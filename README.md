@@ -1,7 +1,7 @@
 
 # Encoder/Decoder - Art+Logic Exercise
 Folder Structure
-
+```
 .Hassan_Badru.zip
 ├── Art_Logic_Env
 │   ├── bin
@@ -86,6 +86,7 @@ Folder Structure
     ├── manage.py
     └── media
         └── ConvertedData.txt
+```
 This is an web application that users to encode and decode 16-bit data
 ## Set Up / Running App
 - Download & unpack .zip file
