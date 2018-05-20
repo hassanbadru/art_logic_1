@@ -120,18 +120,18 @@ them to return the corresponding integer between [-8192..+8191]
         └── ConvertedData.txt
 ```
 ## Technology Stack Used
-##### Django / Python
-##### REACT JS
-##### REST API
+* ##### Django / Python
+* ##### REACT JS
+* ##### REST API
 
 ## Structure
-### Model
+- ### Model
 
-### View
+- ### View
 
-### Routing
+- ### Routing
 
-### API / Serialization
+- ### API / Serialization
 
 ## How App Works (Expectations)
 ### REACT Single Page
