@@ -98,3 +98,29 @@ This is an web application that users to encode and decode 16-bit data
 
 *Note: On your browser, go to http://127.0.0.1:8000/admin to access admin*
 
+## Exercise Requirements
+For this task, you need to write a small program including a pair of functions that can
+- [x] Convert an integer into a special text encoding and then
+- [x] Convert the encoded value back into the original integer.
+Assuming that your solution works correctly and cleanly enough to move forward in this process, these
+functions will need to be used in your part 2 submission.
+#### The Encoding Function
+This function needs to accept a signed integer in the 14-bit range [-8192..+8191] and return a 4 character
+string.
+The encoding process is as follows:
+1. Add 8192 to the raw value, so its range is translated to [0..16383]
+2. Pack that value into two bytes such that the most significant bit of each is cleared
+3. Format the two bytes as a single 4-character hexadecimal string and return it.
+
+#### The Decoding Function
+Your decoding function should accept two bytes on input, both in the range [0x00..0x7F] and recombine
+them to return the corresponding integer between [-8192..+8191]
+
+- [x] Use a Python framework of your choice for the server side processing
+- [x] Use a persistent database of your choice to store the data
+- [x] Use a front-end design/layout framework of your choice to provide the base styling and
+structure for the application
+- [x] Utilize AJAX to populate the data on the landing
+
+## How App Works (Expectations)
+### View Product 
