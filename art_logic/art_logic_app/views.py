@@ -6,6 +6,7 @@ import os
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.views.generic import TemplateView, View, CreateView
+from django.conf import settings
 
 from rest_framework.response import Response
 from rest_framework import generics
@@ -13,12 +14,6 @@ from rest_framework import generics
 from art_logic_app.models import UserAction
 from art_logic_app.serializers import UserActionSerializer
 from art_logic_app.myfunctions import encoder, decoder
-
-
-
-
-
-from django.conf import settings
 
 
 # Create your views here.

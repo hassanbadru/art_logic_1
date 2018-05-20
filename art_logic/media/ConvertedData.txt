@@ -5,6 +5,7 @@ ENCODED DATA:
 -255 is encoded as 3E01
 7550 is encoded as 7A7E
 8191 is encoded as 7F7F
+0 is encoded as 4000
 
 
 DECODED DATA: 

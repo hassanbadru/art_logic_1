@@ -133,14 +133,16 @@ const ResultDisplay = (props) => {
         {/* {(props.result) ? () : null} */}
 
         {
-          (window.result.length <= 6) ? (
-          <div>
-            <h3 style={{color: '#000'}}>RESULTS</h3>
-            <p style={{color: '#000'}}>{window.result}</p>
-          </div>
-        ) : (
-          <i style={{color: 'red'}}>{'Error: ' + window.result}</i>
-        )
+          (window.result) ? (
+            (window.result.length <= 6) ? (
+            <div>
+              <h3 style={{color: '#000'}}>RESULTS</h3>
+              <p style={{color: '#000'}}>{window.result}</p>
+            </div>
+            ) : (
+              <i style={{color: 'red'}}>{'Error: ' + window.result}</i>
+            )
+          ) : null
         }
 
         {/* <p style={{color: '#000'}}>Download <a href="#" style={{color: 'orange'}}>Text File</a> of RESULT</p> */}
