@@ -76,7 +76,7 @@ const UserInput = (props) => {
 
           </span>
 
-          <br/><br/>
+          <br/>
           {
             (props.file_upload) ? (
                     <div>
@@ -99,7 +99,7 @@ const UserInput = (props) => {
                           console.log(e.target.value)
                         }}
                       />
-                      <p style={{color: '#000'}}>Have a text file? <a onClick={props.toUpload} href="#" style={{color: 'orange'}}>Upload</a> instead</p>
+                      {/* <p style={{color: '#000'}}>Have a text file? <a onClick={props.toUpload} href="#" style={{color: 'orange'}}>Upload</a> instead</p> */}
 
                       <button type="submit" onClick={props.get_result}> Compute</button>
                     </div>
@@ -109,6 +109,10 @@ const UserInput = (props) => {
           <br/>
 
         </form>
+
+        <a href={window.MEDIA_URL + '/ConvertedData.txt'}>
+          <i className={'message'} className="fas fa-download" > {'download ConvertedData.txt'} </i>
+        </a>
 
       </div>
   )
@@ -124,9 +128,6 @@ const ResultDisplay = (props) => {
           {(props.currentOperation == 'encoding') ? 'ENCODING' : 'DECODING'}
         </h4>
         <p style={{color: '#000'}}> {(props.currentOperation === 'encoding') ? '(dec to hex)' : '(hex to dec)'}</p>
-        <a href={window.MEDIA_URL + '/ConvertedData.txt'}>
-          <i className={'message'} className="fas fa-download" > {'download ConvertedData.txt'} </i>
-        </a>
         <hr style={{width: '100%'}}></hr>
 
         {(props.result) ? (<h3 style={{color: '#000'}}>RESULTS</h3>) : null}

@@ -1,91 +1,91 @@
 [
     {
-        "model": "art_logic_app.UserTask",
+        "model": "art_logic_app.UserAction",
         "pk": 1,
+        "fields":  {
+        "operation": "encoding",
+        "input": "611",
+        "result": ""
+       }
+    },
+    {
+        "model": "art_logic_app.UserAction",
+        "pk": 2,
         "fields": {
-            "type": "Encoding",
-            "value": "6111",
+            "operation": "encoding",
+            "input": "340",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 3,
         "fields": {
-            "type": "Encoding",
-            "value": "340",
+            "operation": "encoding",
+            "input": "-2628",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 4,
         "fields": {
-            "type": "Encoding",
-            "value": "-2628",
+            "operation": "encoding",
+            "input": "-255",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 5,
         "fields": {
-            "type": "Encoding",
-            "value": "-255",
+            "operation": "encoding",
+            "input": "7550",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 6,
         "fields": {
-            "type": "Encoding",
-            "value": "7550",
+            "operation": "decoding",
+            "input": "0A0A",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 7,
         "fields": {
-            "type": "Decoding",
-            "value": "0A0A",
+            "operation": "decoding",
+            "input": "0029",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 8,
         "fields": {
-            "type": "Decoding",
-            "value": "0029",
+            "operation": "decoding",
+            "input": "3F0F",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 9,
         "fields": {
-            "type": "Decoding",
-            "value": "3F0F",
+            "operation": "decoding",
+            "input": "4400",
             "result": ""
         }
     },
     {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
+        "model": "art_logic_app.UserAction",
+        "pk": 10,
         "fields": {
-            "type": "Decoding",
-            "value": "4400",
-            "result": ""
-        }
-    },
-    {
-        "model": "art_logic_app.UserTask",
-        "pk": 2,
-        "fields": {
-            "type": "Decoding",
-            "value": "5E7F",
+            "operation": "decoding",
+            "input": "5E7F",
             "result": ""
         }
     }

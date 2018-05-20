@@ -37,6 +37,7 @@ class ArtLogicApp(TemplateView):
         # user_action = UserAction()
 
         if self.request.FILES.get('file_compute'):
+            print("recognizes file input")
             file_compute = self.request.FILES['file_compute'].readlines()
             # print(file_compute)
             return redirect('art_logic')
@@ -69,6 +70,8 @@ class ArtLogicApp(TemplateView):
                 operation_type = 'encoding'
             else:
                 operation_type = 'decoding'
+
+            # context['operation_type'] = operation_type
 
             user_action = UserAction(operation=operation_type, input=to_compute, result=result)
             # print(user_action.input)
