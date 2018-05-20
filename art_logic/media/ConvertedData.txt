@@ -1,4 +1,4 @@
-ENCODED DATA
+ENCODED DATA: 
 6111 is encoded as 6F5F
 340 is encoded as 4254
 -2628 is encoded as 2B3C
@@ -6,7 +6,7 @@ ENCODED DATA
 7550 is encoded as 7A7E
 
 
-DECODED DATA
+DECODED DATA: 
 0A0A is decoded as -6902
 0029 is decoded as -8151
 3F0F is decoded as -113

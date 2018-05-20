@@ -30,7 +30,7 @@ def encoder(input_num):
 
     #Inputted Integer (decimal)
     input_num = int(input_num)
-    print(input_num)
+    # print(input_num)
 
     #Check if within range of 16-bit: [-8192..+8191]
     if input_num >= -8192 and input_num <= 8191:
@@ -92,7 +92,7 @@ def encoder(input_num):
 
         #Print encoded num (hex)
         output = h + l
-        print(output)
+        # print(output)
         return output
     else:
       output = "Integer can't exceed 16-bit range"
@@ -127,6 +127,9 @@ def decoder(input_num):
     if l_num > 1:
         for i in input_num:
 
+          # convert character to upper case
+          if i.isalpha():
+              i = i.upper()
           #Check if valid hex
           try:
             bin_num += h2b_lookup[i]
