@@ -2,7 +2,7 @@
 # Encoder/Decoder - Art+Logic Exercise
 
 ## Description
-This is an web application that users to encode and decode 16-bit data
+This is a web application that allows users to encode and decode 16-bit data
 
 ## Set Up / Running App
 - Download & unpack .zip file
