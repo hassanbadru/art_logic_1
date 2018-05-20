@@ -118,6 +118,18 @@ to build production version
 - ### Utility (MyFunction)
 
 - ### Routing
+Project:
+```
+urlpatterns = [
+  url(r'^admin/', admin.site.urls),
+  url(r'^', include('art_logic_app.urls'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+Django App (art_logic_app):
+```
+    url('api/', views.ArtLogicAPI.as_view() ),
+    url(r'^$', views.ArtLogicApp.as_view(), name="art_logic" )
+```
 
 - ### API / Serialization
 
