@@ -116,11 +116,6 @@ The encoding process is as follows:
 Your decoding function should accept two bytes on input, both in the range [0x00..0x7F] and recombine
 them to return the corresponding integer between [-8192..+8191]
 
-- [x] Use a Python framework of your choice for the server side processing
-- [x] Use a persistent database of your choice to store the data
-- [x] Use a front-end design/layout framework of your choice to provide the base styling and
-structure for the application
-- [x] Utilize AJAX to populate the data on the landing
 
 ## How App Works (Expectations)
-### View Product 
+### REACT Single Page
