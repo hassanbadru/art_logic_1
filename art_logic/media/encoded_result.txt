@@ -1,5 +1,0 @@
-6111 is encoded as 6F5F
-340 is encoded as 4254
--2628 is encoded as 2B3C
--255 is encoded as 3E01
-7550 is encoded as 7A7E

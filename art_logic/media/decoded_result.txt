@@ -1,5 +1,0 @@
-0A0A is decoded as -6902
-0029 is decoded as -8151
-3F0F is decoded as -113
-4400 is decoded as 512
-5E7F is decoded as 3967

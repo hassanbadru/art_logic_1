@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 
 from rest_framework.response import Response
@@ -36,10 +36,10 @@ class ArtLogicApp(TemplateView):
 
         # user_action = UserAction()
 
-        if self.request.FILES.get('file'):
-            file_compute = self.request.FILES['file_compute'].readlines()
+        if self.request.FILES.get('file_compute'):
+            file_compute = self.request.FILES['file_compute'].read()
             print(file_compute)
-            return True
+            return redirect('art_logic')
 
         to_compute = self.request.GET.get('to_compute')
 
@@ -71,13 +71,15 @@ class ArtLogicApp(TemplateView):
         #     print([i.pk for i in all_items])
         #     user_action.save()
         encoding_stream = ['6111', '340', '-2628', '-255', '7550']
-        with open(os.path.join(settings.MEDIA_ROOT, 'encoded_result.txt'), 'w') as f:
+        with open(os.path.join(settings.MEDIA_ROOT, 'ConvertedData.txt'), 'w') as f:
+            f.write('ENCODED DATA: '+'\n')
             for x in encoding_stream:
                 f.write(x + ' is encoded as ' + encoder(x) + '\n')
             f.close()
 
         decoding_stream = ['0A0A', '0029', '3F0F', '4400', '5E7F']
-        with open(os.path.join(settings.MEDIA_ROOT, 'decoded_result.txt'), 'w') as f:
+        with open(os.path.join(settings.MEDIA_ROOT, 'ConvertedData.txt'), 'a') as f:
+            f.write('\n\n'+'DECODED DATA: '+'\n')
             for x in decoding_stream:
                 print(x)
                 f.write(x + ' is decoded as ' + str(decoder(x)) + '\n')

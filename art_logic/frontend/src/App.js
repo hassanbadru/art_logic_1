@@ -124,7 +124,9 @@ const ResultDisplay = (props) => {
           {(props.currentOperation == 'encoding') ? 'ENCODING' : 'DECODING'}
         </h4>
         <p style={{color: '#000'}}> {(props.currentOperation === 'encoding') ? '(dec to hex)' : '(hex to dec)'}</p>
-
+        <a href={window.MEDIA_URL + '/ConvertedData.txt'}>
+          <i className={'message'} className="fas fa-download" > {'download ConvertedData.txt'} </i>
+        </a>
         <hr style={{width: '100%'}}></hr>
 
         {(props.result) ? (<h3 style={{color: '#000'}}>RESULTS</h3>) : null}

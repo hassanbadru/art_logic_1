@@ -7,7 +7,7 @@ from art_logic_app.models import UserAction
 
 urlpatterns = [
     url('api/', views.ArtLogicAPI.as_view() ),
-    url(r'^$', views.ArtLogicApp.as_view() )
+    url(r'^$', views.ArtLogicApp.as_view(), name="art_logic" )
     # url(r'^/api/', generics.ListCreateAPIView.as_view(model=UserAction), name='api')
 
 ]
