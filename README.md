@@ -43,42 +43,27 @@ them to return the corresponding integer between [-8192..+8191]
     ├── README.md
     ├── art_logic
     │   ├── __init__.py
-    │   ├── __init__.pyc
     │   ├── settings.py
-    │   ├── settings.pyc
     │   ├── urls.py
-    │   ├── urls.pyc
     │   ├── wsgi.py
-    │   └── wsgi.pyc
     ├── art_logic_app
     │   ├── __init__.py
-    │   ├── __init__.pyc
     │   ├── admin.py
-    │   ├── admin.pyc
     │   ├── apps.py
     │   ├── fixtures
     │   │   └── art_logic_app.json
     │   ├── migrations
     │   │   ├── 0001_initial.py
-    │   │   ├── 0001_initial.pyc
     │   │   ├── 0002_auto_20180515_2039.py
-    │   │   ├── 0002_auto_20180515_2039.pyc
     │   │   ├── 0003_auto_20180519_2226.py
-    │   │   ├── 0003_auto_20180519_2226.pyc
     │   │   ├── __init__.py
     │   │   └── __init__.pyc
     │   ├── models.py
-    │   ├── models.pyc
     │   ├── myfunctions.py
-    │   ├── myfunctions.pyc
     │   ├── serializers.py
-    │   ├── serializers.pyc
     │   ├── tests.py
     │   ├── urls.py
-    │   ├── urls.pyc
-    │   ├── utils.pyc
     │   ├── views.py
-    │   └── views.pyc
     ├── db.sqlite3
     ├── frontend
     │   ├── README.md
@@ -123,15 +108,22 @@ them to return the corresponding integer between [-8192..+8191]
 * ##### Django / Python
 * ##### REACT JS
 * ##### REST API
-
+* ##### Node / NPM
+to build production version
 ## Structure
 - ### Model
 
 - ### View
 
+- ### Utility (MyFunction)
+
 - ### Routing
 
 - ### API / Serialization
+
+- ### Fixtures
+
+- ### ConvertedData.txt
 
 ## How App Works (Expectations)
 ### REACT Single Page
