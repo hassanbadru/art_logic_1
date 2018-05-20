@@ -4,8 +4,11 @@ ENCODED DATA:
 -2628 is encoded as 2B3C
 -255 is encoded as 3E01
 7550 is encoded as 7A7E
-8191 is encoded as 7F7F
-0 is encoded as 4000
+USER ADDED: 00 is encoded as 4000
+USER ADDED: 20 is encoded as 4014
+USER ADDED: 20 is encoded as 4014
+USER ADDED: 20 is encoded as 4014
+
 
 
 DECODED DATA: 
@@ -14,4 +17,5 @@ DECODED DATA:
 3F0F is decoded as -113
 4400 is decoded as 512
 5E7F is decoded as 3967
-ABC is decoded as -6852
+USER ADDED: 7F7F is decoded as 8191
+USER ADDED: ABC is decoded as -6852

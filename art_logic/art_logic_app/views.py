@@ -30,11 +30,12 @@ class ArtLogicApp(TemplateView):
 
         # user_action = UserAction()
 
-        if self.request.FILES.get('file_compute'):
-            print("recognizes file input")
-            file_compute = self.request.FILES['file_compute'].readlines()
-            # print(file_compute)
-            return redirect('art_logic')
+        #Uploaded Text Files
+        # if self.request.FILES.get('file_compute'):
+        #     print("recognizes file input")
+        #     file_compute = self.request.FILES['file_compute'].readlines()
+        #     # print(file_compute)
+        #     return redirect('art_logic')
 
         to_compute = self.request.GET.get('to_compute')
 
@@ -92,26 +93,38 @@ class ArtLogicApp(TemplateView):
         # encoding_stream = ['6111', '340', '-2628', '-255', '7550']
         # decoding_stream = ['0A0A', '0029', '3F0F', '4400', '5E7F']
 
-
         #Write all valid encoded data to text file
         with open(os.path.join(settings.MEDIA_ROOT, 'ConvertedData.txt'), 'w') as f:
             f.write('ENCODED DATA: '+'\n')
+
+            counter = 0 # to count through loop
             for x in encoding_stream:
                 encoded = encoder(x)
+                counter += 1
+                # print(counter)
                 if len(encoded) < 6:
-                    f.write(x + ' is encoded as ' + encoded + '\n')
+                    if counter > 5:
+                        f.write('USER ADDED: ' + x + ' is encoded as ' + encoded + '\n')
+                    else:
+                        f.write(x + ' is encoded as ' + encoded + '\n')
             f.close()
 
 
         #Write all valid decoded data to text file
         with open(os.path.join(settings.MEDIA_ROOT, 'ConvertedData.txt'), 'a') as f:
-            f.write('\n\n'+'DECODED DATA: '+'\n')
+            f.write('\n\n\n'+'DECODED DATA: '+'\n')
+
+            counter = 0 # to count through loop
             for x in decoding_stream:
                 decoded = str(decoder(x))
+                counter += 1
                 if len(decoded) < 6:
                 # print(x)
+                    if counter > 5:
+                        f.write('USER ADDED: ' + x + ' is decoded as ' + decoded + '\n')
+                    else:
+                        f.write(x + ' is decoded as ' + decoded + '\n')
 
-                    f.write(x + ' is decoded as ' + decoded + '\n')
             f.close()
 
 
