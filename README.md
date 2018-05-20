@@ -119,5 +119,10 @@ them to return the corresponding integer between [-8192..+8191]
     └── media
         └── ConvertedData.txt
 ```
+## Technology Stack Used
+### Django / Python
+### REACT JS
+### REST API
+
 ## How App Works (Expectations)
 ### REACT Single Page
