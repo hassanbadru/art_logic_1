@@ -30,6 +30,7 @@ def encoder(input_num):
 
     #Inputted Integer (decimal)
     input_num = int(input_num)
+    print(input_num)
 
     #Check if within range of 16-bit: [-8192..+8191]
     if input_num >= -8192 and input_num <= 8191:
@@ -68,20 +69,20 @@ def encoder(input_num):
 
 
         #Print unencoded binary (hi bit ~ low bit)
-        print(hi_bit, lo_bit)
+        # print(hi_bit, lo_bit)
 
         #Encoding Process: hi_bit ~ low bit (binary)
         hi_bit = hi_bit[1:8] + lo_bit[0]
         lo_bit = '0' + lo_bit[1:8]
 
         #Print encoded binary (hi bit ~ low bit)
-        print(hi_bit, lo_bit)
+        # print(hi_bit, lo_bit)
 
         #Print encoded 8-bit into two 4-bits (hi bit)
-        print(hi_bit[:4], hi_bit[4:])
+        # print(hi_bit[:4], hi_bit[4:])
 
         #Print encoded 8-bit into two 4-bits (low bit)
-        print(lo_bit[:4], lo_bit[4:])
+        # print(lo_bit[:4], lo_bit[4:])
 
 
         #Encoded binary to hex conversion
@@ -95,11 +96,11 @@ def encoder(input_num):
         return output
     else:
       output = "Integer can't exceed 16-bit range"
-      print(output)
+      # print(output)
       return output
   else:
     output = "Please enter a valid integer"
-    print(output)
+    # print(output)
     return output
 
 def decoder(input_num):
@@ -121,22 +122,43 @@ def decoder(input_num):
   #Check if valid string
   if input_num:
     bin_num = ''
-    for i in input_num:
 
-      #Check if valid hex
-      try:
-        bin_num += h2b_lookup[i]
-      except KeyError:
-        output = "Please enter a valid hex"
-        print(output)
-        return output
+    l_num = len(input_num)
+    if l_num > 1:
+        for i in input_num:
 
-    print(bin_num)
+          #Check if valid hex
+          try:
+            bin_num += h2b_lookup[i]
+          except KeyError:
+            output = "Please enter a valid hex"
+            # print(output)
+            return output
+
+        if l_num < 4:
+          n_zeros = (4 - l_num) * 4
+          bin_num = "0" * n_zeros  + bin_num
+          # print(l_num, n_zeros)
+
+        elif l_num > 4:
+          output = "The number exceeds 16-bit"
+          return output
+    else:
+          #Check if valid hex
+          try:
+            bin_num = h2b_lookup[input_num]
+            bin_num = "0" * 12 + bin_num
+          except KeyError:
+            output = "Please enter a valid hex"
+            # print(output)
+            return output
+
+    # print(bin_num)
 
     hi_bit = bin_num[:8]
     lo_bit = bin_num[8:]
 
-    print(hi_bit, lo_bit)
+    # print(hi_bit, lo_bit)
 
 
     #Decoding Process: hi_bit ~ low bit (binary)
@@ -144,7 +166,7 @@ def decoder(input_num):
     hi_bit = '0' + hi_bit[:7]
 
 
-    print(hi_bit + lo_bit)
+    # print(hi_bit + lo_bit)
 
     #Decoded Binary
     bin_num = hi_bit + lo_bit
@@ -158,10 +180,10 @@ def decoder(input_num):
       n += 1
 
     output = dec_integer - 8192
-    print(output)
+    # print(output)
     return output
 
   else:
     output = "Please enter a value"
-    print(output)
+    # print(output)
     return output

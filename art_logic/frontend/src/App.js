@@ -4,10 +4,17 @@ import './css/App.css';
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = {operation: 'encoding', user_input: '', file_upload: false}
+    this.state = {operation: 'encoding', user_input: '', file_upload: false, result: ''}
   }
 
+
+    // componentWillMount(){
+    //     fetch('api/art_logic_app/').then(res => res.json).then(data => this.setState(data))
+    //     console.log(props.data)
+    // }
+
   render() {
+
     return (
       <div id={"intro"}>
         <div className={"intro-body"}>
@@ -29,11 +36,13 @@ class App extends Component {
                  currentOperation={this.state.operation}
                  toUpload={() => this.setState({file_upload: !this.state.file_upload})}
                  file_upload={this.state.file_upload}
+                 get_result={() => this.setState({result: window.result})}
                />
 
                <ResultDisplay
                  currentOperation={this.state.operation}
                  user_input={this.state.user_input}
+                 result={this.state.result}
                 />
              </div>
 
@@ -60,8 +69,10 @@ const UserInput = (props) => {
           <h4>Select an operation</h4>
           <span className={'message'}>
 
-              <label className={"radio-inline message"}>&nbsp;<input type="radio" name="encode" onChange={props.toEncode} checked={encodingStatus} />Encode</label>
-              <label className={"radio-inline message"}>&nbsp;<input type="radio" name="decode" onChange={props.toDecode} checked={!encodingStatus}/>Decode</label>
+              <div>
+                <label className={"radio-inline message"}>&nbsp;<input type="radio" name="encode" onChange={props.toEncode} checked={encodingStatus} />Encode</label>
+                <label className={"radio-inline message"}>&nbsp;<input type="radio" name="decode" onChange={props.toDecode} checked={!encodingStatus}/>Decode</label>
+              </div>
 
           </span>
 
@@ -71,7 +82,7 @@ const UserInput = (props) => {
                     <div>
                       <input
                         type="file"
-                        name="encode"
+                        name="file_compute"
                       />
 
                       <p style={{color: '#000'}}>Prefer to type in? Use the<a onClick={props.toUpload} href="#" style={{color: 'orange'}}> Text Box</a></p>
@@ -90,7 +101,7 @@ const UserInput = (props) => {
                       />
                       <p style={{color: '#000'}}>Have a text file? <a onClick={props.toUpload} href="#" style={{color: 'orange'}}>Upload</a> instead</p>
 
-                      <button type="submit">Compute</button>
+                      <button type="submit" onClick={props.get_result}> Compute</button>
                     </div>
                   )
           }
@@ -104,7 +115,9 @@ const UserInput = (props) => {
 }
 
 const ResultDisplay = (props) => {
-  $.get('api/art_logic_app/').then(data => console.log(data))
+
+  // console.log(window.result)
+
   return (
     <div className={"result_view"}>
         <h4 style={{color: '#000'}}>
@@ -113,17 +126,18 @@ const ResultDisplay = (props) => {
         <p style={{color: '#000'}}> {(props.currentOperation === 'encoding') ? '(dec to hex)' : '(hex to dec)'}</p>
 
         <hr style={{width: '100%'}}></hr>
-        <h3 style={{color: '#000'}}>RESULTS</h3>
-        <p style={{color: '#000'}}>{props.user_input}</p>
-        <p style={{color: '#000'}}>test</p>
-        <div className={'col-md-4'} style={{width: '100%'}}>
-          TEST1
-        </div>
-        <div className={'col-md-4'} style={{width: '100%'}}>
-          TEST2
-        </div>
 
-        <p style={{color: '#000'}}>Download <a href="#" style={{color: 'orange'}}>Text File</a> of RESULT</p>
+        {(props.result) ? (<h3 style={{color: '#000'}}>RESULTS</h3>) : null}
+
+        {
+          (window.result.length <= 6) ? (
+            <p style={{color: '#000'}}>{window.result}</p>
+        ) : (
+          <i style={{color: 'red'}}>{'Error: ' + window.result}</i>
+        )
+        }
+
+        {/* <p style={{color: '#000'}}>Download <a href="#" style={{color: 'orange'}}>Text File</a> of RESULT</p> */}
 
     </div>
   )
