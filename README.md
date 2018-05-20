@@ -123,7 +123,9 @@ to build production version
 
 - ### Fixtures
 
-- ### ConvertedData.txt
+- ### Static Files
+
+- ### Media Files (ConvertedData.txt)
 
 ## How App Works (Expectations)
 ### REACT Single Page
