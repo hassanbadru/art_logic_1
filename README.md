@@ -8,8 +8,8 @@ This is a single page web application that allows users to encode and decode dat
 - Download & unpack .zip file
 - Start Virtual Environment using the command `source Art_Logic_Env/bin/activate `
 - Assuming you already have *python* and *pip*, install requirements using `​ pip install -r requirements.txt` within command prompt or terminal *(if not, check out [How to install python & pip ](https://pip.pypa.io/en/stable/installing/))*
-- Run the command `python manage.py runserver`
-- On your browser, go to http://127.0.0.1:8000/ or whatever server address was provided in terminal
+- To start server, run the command `python manage.py runserver`
+- On your browser, go to http://127.0.0.1:8000/ or local server address provided within terminal
 
 *Note: On your browser, go to http://127.0.0.1:8000/api to access REST API*
 
@@ -197,7 +197,7 @@ Background Image:
 
 
 
-## How App Works (Expectations)
+## How the App Works
 ### REACT Single Page
 ![alt text](https://docs.google.com/uc?id=1MPyshrH0s3bdYfZQ3i13XqrUvCFqVQyd "screenshot")
 ## Features
