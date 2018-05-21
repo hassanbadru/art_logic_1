@@ -141,3 +141,4 @@ Django App (art_logic_app):
 
 ## How App Works (Expectations)
 ### REACT Single Page
+![alt text](https://docs.google.com/uc?id=1MPyshrH0s3bdYfZQ3i13XqrUvCFqVQyd "screenshot")
