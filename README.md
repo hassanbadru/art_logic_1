@@ -105,11 +105,12 @@ them to return the corresponding integer between [-8192..+8191]
         └── ConvertedData.txt
 ```
 ## Technology Stack Used
-* ##### Django / Python
-* ##### REACT JS
-* ##### REST API
-* ##### Node / NPM
-to build production version
+* ##### REACT JS (Frontend)
+* ##### Django / Python (Backend)
+* ##### PostgreSQL (Database)
+* ##### Django REST Framework (API)
+* ##### Node / NPM (Production Build)
+
 ## Structure
 - ### Model
 
