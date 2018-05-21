@@ -2,7 +2,7 @@
 # Encoder/Decoder - Art+Logic Exercise
 
 ## Description
-This is a single page web application that allows users to encode and decode 16-bit data
+This is a single page web application that allows users to encode and decode data
 
 ## Set Up / Running App
 - Download & unpack .zip file
@@ -21,15 +21,15 @@ For this task, you need to write a small program including a pair of functions t
 Assuming that your solution works correctly and cleanly enough to move forward in this process, these
 functions will need to be used in your part 2 submission.
 #### The Encoding Function
-This function needs to accept a signed integer in the 14-bit range [-8192..+8191] and return a 4 character
+My encoding function accepts a signed integer in the 14-bit range [-8192..+8191] and returns a 4 character hexadecimal
 string.
 The encoding process is as follows:
-1. Add 8192 to the raw value, so its range is translated to [0..16383]
-2. Pack that value into two bytes such that the most significant bit of each is cleared
-3. Format the two bytes as a single 4-character hexadecimal string and return it.
+1. Added 8192 to the raw value, so its range is translated to [0..16383]
+2. Packed that value into two bytes such that the most significant bit of each is cleared
+3. Formatted the two bytes as a single 4-character hexadecimal string and returned it.
 
 #### The Decoding Function
-Your decoding function should accept two bytes on input, both in the range [0x00..0x7F] and recombine
+My decoding function accepts two bytes on input, both in the range [0x00..0x7F] and recombines
 them to return the corresponding integer between [-8192..+8191]
 
 ## Folder Structure
@@ -184,9 +184,10 @@ Background Image:
 ## Features
 * ##### User can select what kind of operation they want to perform
 * ##### After selecting operation, user can input values they want to encode/decode
-* ##### The app checks if user inputted a correctly formatted value i.e.
+* ##### The app checks if user inputted a correctly formatted (valid) values i.e.
     14-bit signed integer (when encoding)
     16-bit hexadecimal decimal value for decoding
+* ##### Error Handling: Users get error messages if invalid values were inputted
 ## Extensibility
 nmnm
 
