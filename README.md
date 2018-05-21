@@ -20,16 +20,16 @@ For this task, you need to write a small program including a pair of functions t
 Assuming that your solution works correctly and cleanly enough to move forward in this process, these
 functions will need to be used in your part 2 submission.
 #### The Encoding Function
-My encoding function accepts a signed integer in the 14-bit range [-8192..+8191] and returns a 4 character hexadecimal
+My encoding function accepts a signed integer in the 14-bit range *[-8192..+8191]* and returns a 4 character hexadecimal
 string.
 The encoding process is as follows:
-1. Added 8192 to the raw value, so its range is translated to [0..16383]
+1. Added 8192 to the raw value, so its range is translated to *[0..16383]*
 2. Packed that value into two bytes such that the most significant bit of each is cleared
 3. Formatted the two bytes as a single 4-character hexadecimal string and returned it.
 
 #### The Decoding Function
-My decoding function accepts two bytes on input, both in the range [0x00..0x7F] and recombines
-them to return the corresponding integer between [-8192..+8191]
+My decoding function accepts two bytes on input, both in the range *[0x00..0x7F]* and recombines
+them to return the corresponding integer between *[-8192..+8191]*
 
 ## Folder Structure
 ```
@@ -208,6 +208,10 @@ Background Image:
     
     > 16-bit hexadecimal decimal value for decoding
 * ##### Error Handling: Users get error messages if invalid values were inputted
+* ##### If no errors, the result of the encoding or decoding operation is outputted & displays.
+* ##### Download convertedData.txt file containing encoding/decoding of specific values
+* ##### The app keeps a record of every valid operation performed by the user and serializes it for the API 
+
 ## Extensibility
 nmnm
 
