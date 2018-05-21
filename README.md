@@ -177,14 +177,21 @@ Preloaded data with output written into convertedData.txt
 Background Image: 
 * intro-bg.jpg
 - ### Media Files (ConvertedData.txt)
-| To Encode     | To Decode    | 
+| To Encode     | After Encode | 
 | ------------- |------------- |
-| 6111          |0A0A          |
-| 340           | 0029         | 
-| -2628         | 3F0F         | 
-| -255          | 4400         | 
-| 7550          | 5E7F         | 
+| 6111          | 4463         |
+| 340           | 4254         | 
+| -2628         | 2B3C         | 
+| -255          | 3E01         | 
+| 7550          | 7A7E         | 
 
+| To Decode     | After Decode | 
+| ------------- |------------- |
+| 0A0A          |  -6902       |
+| 0029          |  -8151       | 
+| 3F0F          |  -113        | 
+| 4400          |  512         | 
+| 5E7F          |  3967        | 
 
 
 
