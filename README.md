@@ -170,9 +170,20 @@ art_logic_app.json
 ```
 Preloaded data with output written into convertedData.txt
 - ### Static Files
-
+#### CSS:
+* App.css
+* index.css
+#### IMAGE:
+Background Image: 
+* intro-bg.jpg
 - ### Media Files (ConvertedData.txt)
 
 ## How App Works (Expectations)
 ### REACT Single Page
 ![alt text](https://docs.google.com/uc?id=1MPyshrH0s3bdYfZQ3i13XqrUvCFqVQyd "screenshot")
+
+## Extensibility
+nmnm
+
+## Other Notes
+dnnd
