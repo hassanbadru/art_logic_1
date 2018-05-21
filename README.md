@@ -204,7 +204,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 | 4400          |  512         | 
 | 5E7F          |  3967        | 
 
-The app also writes all **USER ADDED** conversions to the file: *ConvertedData.txt*
+The app also writes all **USER ADDED** encoding/decoding conversions to the file: *ConvertedData.txt*
 
 ## How the App Works
 ### REACT Single Page
