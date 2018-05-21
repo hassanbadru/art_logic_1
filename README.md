@@ -5,8 +5,8 @@
 This is a single page web application that allows users to encode and decode data
 
 ## Set Up / Running App
-- Download & unpack .zip file
-- Start Virtual Environment using the command `source Art_Logic_Env/bin/activate `
+- Download & unpack Hassan_Badru_Part1.zip file
+- (*Recommended*) Install & run a Virtual Environment (e.g. `source Art_Logic_Env/bin/activate `)
 - Assuming you already have *python* and *pip*, install requirements using `​ pip install -r requirements.txt` within command prompt or terminal *(if not, check out [How to install python & pip ](https://pip.pypa.io/en/stable/installing/))*
 - Assuming you already have *Node* or *NPM*, inside the **frontend** folder, install node_modules using `npm install`  *(if not, check out [How to install Node ](https://nodejs.org/en/download/package-manager/))*
 - To start server, run the command `python manage.py runserver`
@@ -34,7 +34,7 @@ them to return the corresponding integer between *[-8192..+8191]*
 
 ## Folder Structure
 ```
-.Hassan_Badru.zip
+Hassan_Badru_Part1
 ├── Art_Logic_Env
 │   ├── bin
 │   │   ├── activate
