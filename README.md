@@ -34,12 +34,12 @@ them to return the corresponding integer between *[-8192..+8191]*
 
 ## Folder Structure
 ```
-Hassan_Badru_Part1
+Main Folder
 ├── Art_Logic_Env
 │   ├── bin
 │   │   ├── activate
 │   ├├── README.md
-└── art_logic
+└── Hassan_Badru_Part1
     ├── README.md
     ├── art_logic
     │   ├── __init__.py
@@ -100,6 +100,7 @@ Hassan_Badru_Part1
     │   │   ├── logo.svg
     │   │   └── registerServiceWorker.js
     │   └── yarn.lock
+    ├── requirements.txt
     ├── manage.py
     └── media
         └── ConvertedData.txt
