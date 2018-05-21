@@ -12,7 +12,7 @@ This is a single page web application that allows users to encode and decode dat
 - Run the command `python manage.py runserver`
 - On your browser, go to http://127.0.0.1:8000/ or whatever server address was provided in terminal
 
-*Note: On your browser, go to http://127.0.0.1:8000/admin to access admin*
+*Note: On your browser, go to http://127.0.0.1:8000/api to access REST API*
 
 ## Exercise Requirements
 For this task, you need to write a small program including a pair of functions that can
