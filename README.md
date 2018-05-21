@@ -185,8 +185,9 @@ Background Image:
 * ##### User can select what kind of operation they want to perform
 * ##### After selecting operation, user can input values they want to encode/decode
 * ##### The app checks if user inputted a correctly formatted (valid) values i.e.
-    14-bit signed integer (when encoding)
-    16-bit hexadecimal decimal value for decoding
+    > 14-bit signed integer (when encoding)
+    
+    > 16-bit hexadecimal decimal value for decoding
 * ##### Error Handling: Users get error messages if invalid values were inputted
 ## Extensibility
 nmnm
