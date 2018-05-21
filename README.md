@@ -2,7 +2,7 @@
 # Encoder/Decoder - Art+Logic Exercise
 
 ## Description
-This is a web application that allows users to encode and decode 16-bit data
+This is a single page web application that allows users to encode and decode 16-bit data
 
 ## Set Up / Running App
 - Download & unpack .zip file
@@ -113,9 +113,22 @@ them to return the corresponding integer between [-8192..+8191]
 
 ## Structure
 - ### Model
-
+```
+class UserAction(models.Model):
+    operation = models.CharField(max_length=100, default='encoding')
+    input = models.CharField(max_length=100, default='8191')
+    result = models.CharField(max_length=100, default='')
+```
 - ### View
+```
+class ArtLogicAPI(generics.ListCreateAPIView):
+    queryset = UserAction.objects.all()
+    serializer_class = UserActionSerializer
 
+
+class ArtLogicApp(TemplateView):
+    template_name = 'index.html'
+```
 - ### Utility (MyFunction)
 
 - ### Routing
@@ -133,7 +146,12 @@ Django App (art_logic_app):
 ```
 
 - ### API / Serialization
-
+```
+class UserActionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserAction
+        fields = ('operation', 'input', 'result')
+```
 - ### Fixtures
 
 - ### Static Files
