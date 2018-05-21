@@ -177,6 +177,18 @@ Preloaded data with output written into convertedData.txt
 Background Image: 
 * intro-bg.jpg
 - ### Media Files (ConvertedData.txt)
+| To Encode     | To Decode    | 
+| ------------- |------------- |
+| 6111          |0A0A          |
+| 340           | 0029         | 
+| -2628         | 3F0F         | 
+| -255          | 4400         | 
+| 7550          | 5E7F         | 
+
+
+
+
+
 
 ## How App Works (Expectations)
 ### REACT Single Page
