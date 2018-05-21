@@ -224,6 +224,6 @@ The app also writes all **USER ADDED** encoding/decoding conversions to the file
 
 ## Extensibility
 - In the future, app should llow user to either type in numbers or add a text file
-
+![alt text](https://docs.google.com/uc?id=1KpToCfgzJh__eUMxtZGlPydJgs9XojC8 "screenshot2")
 ## Other Notes
 dnnd
