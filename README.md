@@ -201,16 +201,17 @@ Background Image:
 ### REACT Single Page
 ![alt text](https://docs.google.com/uc?id=1MPyshrH0s3bdYfZQ3i13XqrUvCFqVQyd "screenshot")
 ## Features
-* ##### User can select what kind of operation they want to perform
-* ##### After selecting operation, user can input values they want to encode/decode
-* ##### The app checks if user inputted a correctly formatted (valid) values i.e.
+* User can select what kind of operation they want to perform
+* After selecting operation, user can input values they want to encode/decode
+* The app checks if user inputted a correctly formatted (valid) values i.e.
     > 14-bit signed integer (when encoding)
     
     > 16-bit hexadecimal decimal value for decoding
-* ##### Error Handling: Users get error messages if invalid values were inputted
-* ##### If no errors, the result of the encoding or decoding operation is outputted & displays.
-* ##### Download convertedData.txt file containing encoding/decoding of specific values
-* ##### The app keeps a record of every valid operation performed by the user and serializes it for the API 
+* Error Handling: Users get error messages if invalid values were inputted
+* If no errors, the result of the encoding or decoding operation is outputted & displays.
+* Can read stored data in database and uses the object values conpute results
+* Download convertedData.txt file containing encoding/decoding of specific values
+* The app keeps a record of every valid operation performed by the user and serializes it for the API 
 
 ## Extensibility
 nmnm
