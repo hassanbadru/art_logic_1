@@ -181,7 +181,12 @@ Background Image:
 ## How App Works (Expectations)
 ### REACT Single Page
 ![alt text](https://docs.google.com/uc?id=1MPyshrH0s3bdYfZQ3i13XqrUvCFqVQyd "screenshot")
-
+## Features
+* ##### User can select what kind of operation they want to perform
+* ##### After selecting operation, user can input values they want to encode/decode
+* ##### The app checks if user inputted a correctly formatted value i.e.
+    14-bit signed integer (when encoding)
+    16-bit hexadecimal decimal value for decoding
 ## Extensibility
 nmnm
 
