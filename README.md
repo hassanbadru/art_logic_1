@@ -168,6 +168,7 @@ class UserActionSerializer(serializers.ModelSerializer):
         fields = ('operation', 'input', 'result')
 ```
 - ### Fixtures
+Preloaded with data to be encoded/decoded and written into convertedData.txt
 #### File:
 ```
 art_logic_app.json
@@ -203,6 +204,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 | 4400          |  512         | 
 | 5E7F          |  3967        | 
 
+The app also writes all **USER ADDED** conversions to the file: *ConvertedData.txt*
 
 ## How the App Works
 ### REACT Single Page
@@ -216,8 +218,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     > 16-bit hexadecimal decimal value for decoding
 * Error Handling: Users get error messages if invalid values were inputted
 * If no errors, the result of the encoding or decoding operation is outputted & displays.
-* Can read stored data in database and uses the object values conpute results
-* Download convertedData.txt file containing encoding/decoding of specific values
+* The app reads stored data (for encoding/decoding) in database and then uses the data object attributes to compute results
+* Allows user to download convertedData.txt file containing encoding/decoding data of preloaded values
 * The app keeps a record of every valid operation performed by the user and serializes it for the API 
 
 ## Extensibility
