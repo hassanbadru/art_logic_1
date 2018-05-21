@@ -129,8 +129,8 @@ class ArtLogicAPI(generics.ListCreateAPIView):
 class ArtLogicApp(TemplateView):
     template_name = 'index.html'
 ```
--### Template 
-I set the template use to load from React's production build folder
+- ### Template 
+I set the template use to load from React's production build folder in *settings.py*
 `'DIRS': [ os.path.join(BASE_DIR, 'frontend/build') ],`
 
 - ### Utility (MyFunction.py)
@@ -181,6 +181,12 @@ Preloaded data with output written into convertedData.txt
 Background Image: 
 * intro-bg.jpg
 - ### Media Files (ConvertedData.txt)
+I set the directory to save ConvertedData.txt in *settings.py* using:
+```
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+```
+
 | To Encode     | After Encode | 
 | ------------- |------------- |
 | 6111          | 4463         |
@@ -196,8 +202,6 @@ Background Image:
 | 3F0F          |  -113        | 
 | 4400          |  512         | 
 | 5E7F          |  3967        | 
-
-
 
 
 ## How the App Works
