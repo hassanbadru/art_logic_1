@@ -130,9 +130,20 @@ class ArtLogicApp(TemplateView):
     template_name = 'index.html'
 ```
 - ### Utility (MyFunction)
-
+#### Encoding Function:
+```
+def encoder(input_num):
+    ....
+    return output
+```
+#### Decoding function:
+```
+def decoder(input_num):
+    ....
+    return output
+```
 - ### Routing
-Project:
+Django Project:
 ```
 urlpatterns = [
   url(r'^admin/', admin.site.urls),
