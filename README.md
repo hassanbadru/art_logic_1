@@ -223,7 +223,5 @@ The app also writes all **USER ADDED** encoding/decoding conversions to the file
 * The app keeps a record of every valid operation performed by the user and serializes it for the API 
 
 ## Extensibility
-- In the future, app should llow user to either type in numbers or add a text file
-![alt text](https://docs.google.com/uc?id=1KpToCfgzJh__eUMxtZGlPydJgs9XojC8 "screenshot2")
-## Other Notes
-dnnd
+- In the future, user should be able to toggle between user text input or file input
+![alt text](https://docs.google.com/uc?id=1KpToCfgzJh__eUMxtZGlPydJgs9XojC8 "screenshot_2")
