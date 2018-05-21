@@ -129,7 +129,7 @@ class ArtLogicAPI(generics.ListCreateAPIView):
 class ArtLogicApp(TemplateView):
     template_name = 'index.html'
 ```
-- ### Utility (MyFunction)
+- ### Utility (MyFunction.py)
 #### Encoding Function:
 ```
 def encoder(input_num):
@@ -164,7 +164,11 @@ class UserActionSerializer(serializers.ModelSerializer):
         fields = ('operation', 'input', 'result')
 ```
 - ### Fixtures
-
+#### File:
+```
+art_logic_app.json
+```
+Preloaded data with output written into convertedData.txt
 - ### Static Files
 
 - ### Media Files (ConvertedData.txt)
