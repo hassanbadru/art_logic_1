@@ -9,7 +9,8 @@ This is a single page web application that allows users to encode and decode dat
 - (*Recommended*) Install & run a Virtual Environment (e.g. `source Art_Logic_Env/bin/activate `)
 - Assuming you already have *python* and *pip*, install requirements using `​ pip install -r requirements.txt` within command prompt or terminal *(if not, check out [How to install python & pip ](https://pip.pypa.io/en/stable/installing/))*
 - Assuming you already have *Node* or *NPM*, inside the **frontend** folder, install node_modules (dependencies) using `npm install`  *(if not, check out [How to install Node ](https://nodejs.org/en/download/package-manager/))*
-- To start server, run the command `python manage.py runserver`
+- Next, use the command `npm run build` to create production build to be served by Django server
+- To start server, go to Project root folder and then run the command `python manage.py runserver`
 - On your browser, go to http://127.0.0.1:8000/ or local server address provided within terminal
 
 *Note: On your browser, go to http://127.0.0.1:8000/api to access REST API*
