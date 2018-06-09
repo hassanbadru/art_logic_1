@@ -1,5 +1,5 @@
 
-# Encoder/Decoder - Art+Logic Exercise
+# Encoder/Decoder - Art+Logic (Exercise 1)
 
 ## Description
 This is a single page web application that allows users to encode and decode data
